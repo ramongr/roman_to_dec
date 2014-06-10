@@ -20,14 +20,15 @@ roman_to_dec(char *roman){
     char letter='I';
 
     i=0;
-    while(roman[i++]) i++;
+    while(roman[i++])
 
+    sum = 0;
 
     while(i>=0){
 
         switch(roman[i]){
             case 'I':
-                if(letter == 'V'    ){
+                if(letter == 'V'){
                     sum -=1;
                 }else{
                     sum +=1;
@@ -35,7 +36,7 @@ roman_to_dec(char *roman){
             break;
 
             case 'V':
-                if(letter == 'X'    ){
+                if(letter == 'X'){
                     sum -=5;
                 }else{
                     sum +=5;
@@ -44,7 +45,7 @@ roman_to_dec(char *roman){
             break;
 
             case 'X':
-                if(letter == 'L'    ){
+                if(letter == 'L'){
                     sum -=10;
                 }else{
                     sum +=10;
@@ -53,7 +54,7 @@ roman_to_dec(char *roman){
             break;
 
             case 'L':
-                if(letter == 'C'    ){
+                if(letter == 'C' || letter == 'D'){
                     sum -=50;
                 }else{
                     sum +=50;
@@ -62,7 +63,7 @@ roman_to_dec(char *roman){
             break;
 
             case 'C':
-                if(letter == 'D'    ){
+                if(letter == 'D' || letter == 'M'){
                     sum -=100;
                 }else{
                     sum +=100;
@@ -71,7 +72,7 @@ roman_to_dec(char *roman){
             break;
 
             case 'D':
-                if(letter == 'M'    ){
+                if(letter == 'M'){
                     sum -=500;
                 }else{
                     sum +=500;
